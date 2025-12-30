@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [{ "src": "api/*.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/raw/(.*)", "dest": "/api/raw.js" },
+    { "src": "/upload", "dest": "/api/upload.js" },
+    { "src": "/", "dest": "/api/index.js" }
+  ]
+}
